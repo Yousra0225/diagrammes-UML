@@ -19,6 +19,23 @@ Il ne montre pas comment le système fonctionne, mais ce qu'il permet de faire.
 | **Extend**           | `<<extend>>`        | Une action **optionnelle**, déclenchée dans des conditions particulières          |
 
 ---
+### 🎭 Acteurs
+- **Utilisateur** : peut s'inscrire, se connecter, envoyer et lire un message  
+- **Admin** : peut se connecter, gérer les utilisateurs, consulter les logs
+
+---
+## 🔸 Cas d'utilisation
+
+| Cas                           | Acteur concerné | Notes                                |
+|-------------------------------|-----------------|--------------------------------------|
+| S’inscrire                    | Utilisateur     |                                      |
+| Se connecter                  | Utilisateur, Admin | Utilisé par les deux                |
+| Envoyer un message            | Utilisateur     |                                      |
+| Lire un message               | Utilisateur     |                                      |
+| Gérer les utilisateurs        | Admin           | Peut inclure *Rechercher un utilisateur* |
+| Rechercher un utilisateur     | Admin           | `<<include>>` dans *Gérer les utilisateurs* |
+| Consulter les logs système    | Admin           | `<<extend>>` de *Gérer les utilisateurs* (optionnel) |
+
 
 ## Exemple concret : Application de reservation Kékés voyages : 
 ![diagramme-use-case-kékés-voyages](data/use-case-diagram-for-travel-agency.jpg)
