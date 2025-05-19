@@ -9,12 +9,14 @@ Il ne montre pas comment le système fonctionne, mais ce qu'il permet de faire.
 
 ## Éléments de base
 
-| Élément               | Symbole UML   | Description technique                                                           |
-| --------------------- | ------------- | ------------------------------------------------------------------------------- |
-| **Acteur**            | 👤 (stickman) | Représente un utilisateur ou un système externe qui interagit avec le système   |
-| **Cas d’utilisation** | ⭕ (ovale)    | Fonctionnalité offerte par le système (ex. : "Se connecter", "Envoyer message") |
-| **Système**           | ▭ (rectangle) | Conteneur qui encadre tous les cas d'utilisation                                |
-| **Association**       | ➖ (ligne)    | Ligne qui relie l’acteur à ses cas d’utilisation                                |
+| Élément              | Symbole UML        | Description technique                                                             |
+|----------------------|--------------------|------------------------------------------------------------------------------------|
+| **Acteur**           | 👤 (stickman)       | Utilisateur ou système externe interagissant avec le système                      |
+| **Cas d’utilisation**| ⭕ (ovale)          | Fonction offerte par le système                                                   |
+| **Système**          | ▭ (rectangle)      | Conteneur des cas d'utilisation                                                   |
+| **Association**      | ➖ (ligne)          | Lien entre acteur et cas d'utilisation                                            |
+| **Include**          | `<<include>>`       | Une action **nécessaire** et incluse automatiquement dans une autre              |
+| **Extend**           | `<<extend>>`        | Une action **optionnelle**, déclenchée dans des conditions particulières          |
 
 ---
 
