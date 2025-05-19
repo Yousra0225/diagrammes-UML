@@ -21,4 +21,3 @@ Il ne montre pas comment le système fonctionne, mais ce qu'il permet de faire.
 ## Exemple concret : Application de reservation Kékés voyages : 
 ![diagramme-use-case-kékés-voyages](data/use-case-diagram-for-travel-agency.jpg)
 
-## 🖼️ Représentation textuelle du diagramme
