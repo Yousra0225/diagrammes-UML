@@ -15,3 +15,8 @@
 - `-` → private
 - `#` → protected
 - `: Type` → type de retour ou type d’attribut
+
+## Relations entre les classes 
+|Type de relation|Symbole UML|Explication|
+|:---|:---|:---|
+|Association|simple trait `──`|Une classe utilise une autre|
