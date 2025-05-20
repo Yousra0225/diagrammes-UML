@@ -1,4 +1,5 @@
 # Diagramme de classe
+```bash
 +----------------------+
 | NomClasse |
 +----------------------+
@@ -8,3 +9,9 @@
 | + méthode1() : Type |
 | + méthode2() : Type |
 +----------------------+
+```
+
+- `+` → public
+- `-` → private
+- `#` → protected
+- `: Type` → type de retour ou type d’attribut
