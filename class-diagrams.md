@@ -20,3 +20,7 @@
 |Type de relation|Symbole UML|Explication|
 |:---|:---|:---|
 |Association|simple trait `──`|Une classe utilise une autre|
+|Dépendance|trait pointillé `--->`|Une classe dépend d’une autre|
+|Aggregation|trait pointillé `◊──`|Une classe utilise une autre et peut la supprimer|
+|Composant|trait pointillé `--`|Une classe utilise une autre et ne peut pas la supprimer|
+|Composition|trait pointillé `◆──`|Une classe contient obligatoirement l’autre (fort lien)|
