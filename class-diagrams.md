@@ -22,5 +22,5 @@
 |Association|simple trait `──`|Une classe utilise une autre|
 |Dépendance|trait pointillé `--->`|Une classe dépend d’une autre|
 |Aggregation|trait pointillé `◊──`|Une classe utilise une autre et peut la supprimer|
-|Composant|trait pointillé `--`|Une classe utilise une autre et ne peut pas la supprimer|
+|Héritage|flèche creuse `──▷`|Classe enfant hérite d’une classe mère|
 |Composition|trait pointillé `◆──`|Une classe contient obligatoirement l’autre (fort lien)|
