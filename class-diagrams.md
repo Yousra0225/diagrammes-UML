@@ -1,13 +1,13 @@
 # Diagramme de classe
 ```bash
 +----------------------+
-| NomClasse |
+| NomClasse            |
 +----------------------+
-| - attribut1 : Type |
-| - attribut2 : Type |
+| - attribut1 : Type   |
+| - attribut2 : Type   |
 +----------------------+
-| + méthode1() : Type |
-| + méthode2() : Type |
+| + méthode1() : Type  |
+| + méthode2() : Type  |
 +----------------------+
 ```
 
@@ -24,3 +24,22 @@
 |Aggregation|trait pointillé `◊──`|Une classe utilise une autre et peut la supprimer|
 |Héritage|flèche creuse `──▷`|Classe enfant hérite d’une classe mère|
 |Composition|trait pointillé `◆──`|Une classe contient obligatoirement l’autre (fort lien)|
+### Exemple : 
+```bash
++----------------------+
+|      Paiement        |
++----------------------+
+| - montant : double   |
++----------------------+
+| + effectuer()        |
++----------------------+
+           ▲
+           |
++----------------------+         +-----------------------+
+| PaiementCarte        |         | PaiementEspèces       |
++----------------------+         +-----------------------+
+| - numCarte : String  |         |                       |
++----------------------+         +-----------------------+
+| + effectuer()        |         | + effectuer()         |
++----------------------+         +-----------------------+
+```
