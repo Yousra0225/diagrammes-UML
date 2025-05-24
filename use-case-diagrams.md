@@ -1,42 +1,45 @@
 # Use Case Diagrams
 
-## Définition
+## Definition
 
-Le **diagramme de cas d'utilisation** (use case diagram) décrit les **interactions entre les utilisateurs (acteurs)** et un **système**.  
-Il ne montre pas comment le système fonctionne, mais ce qu'il permet de faire.
+A **use case diagram** shows the **interactions between users (actors)** and a **system**.  
+It does not show how the system works, but what it allows users to do.
+
+---
+
+## Basic Elements
+
+| Element               | UML Symbol         | Technical Description                                                             |
+|-----------------------|--------------------|------------------------------------------------------------------------------------|
+| **Actor**             | 👤 (stickman)       | User or external system interacting with the system                               |
+| **Use Case**          | ⭕ (oval)           | Function offered by the system                                                    |
+| **System**            | ▭ (rectangle)      | Container of use cases                                                            |
+| **Association**       | ➖ (line)           | Link between actor and use case                                                   |
+| **Include**           | `<<include>>`       | A **required** action automatically included in another                           |
+| **Extend**            | `<<extend>>`        | An **optional** action triggered under special conditions                         |
 
 ---
 
-## Éléments de base
-
-| Élément              | Symbole UML        | Description technique                                                             |
-|----------------------|--------------------|------------------------------------------------------------------------------------|
-| **Acteur**           | 👤 (stickman)       | Utilisateur ou système externe interagissant avec le système                      |
-| **Cas d’utilisation**| ⭕ (ovale)          | Fonction offerte par le système                                                   |
-| **Système**          | ▭ (rectangle)      | Conteneur des cas d'utilisation                                                   |
-| **Association**      | ➖ (ligne)          | Lien entre acteur et cas d'utilisation                                            |
-| **Include**          | `<<include>>`       | Une action **nécessaire** et incluse automatiquement dans une autre              |
-| **Extend**           | `<<extend>>`        | Une action **optionnelle**, déclenchée dans des conditions particulières          |
+### Actors
+- **User**: can register, log in, send and read a message  
+- **Admin**: can log in, manage users, view logs
 
 ---
-### 🎭 Acteurs
-- **Utilisateur** : peut s'inscrire, se connecter, envoyer et lire un message  
-- **Admin** : peut se connecter, gérer les utilisateurs, consulter les logs
+
+## 🔸 Use Cases
+
+| Use Case                       | Involved Actor   | Notes                                              |
+|-------------------------------|------------------|----------------------------------------------------|
+| Register                      | User             |                                                    |
+| Log in                        | User, Admin      | Used by both                                      |
+| Send a message                | User             |                                                    |
+| Read a message                | User             |                                                    |
+| Manage users                  | Admin            | May include *Search for a user*                   |
+| Search for a user             | Admin            | `<<include>>` in *Manage users*                   |
+| View system logs              | Admin            | `<<extend>>` of *Manage users* (optional)         |
 
 ---
-## 🔸 Cas d'utilisation
 
-| Cas                           | Acteur concerné | Notes                                |
-|-------------------------------|-----------------|--------------------------------------|
-| S’inscrire                    | Utilisateur     |                                      |
-| Se connecter                  | Utilisateur, Admin | Utilisé par les deux                |
-| Envoyer un message            | Utilisateur     |                                      |
-| Lire un message               | Utilisateur     |                                      |
-| Gérer les utilisateurs        | Admin           | Peut inclure *Rechercher un utilisateur* |
-| Rechercher un utilisateur     | Admin           | `<<include>>` dans *Gérer les utilisateurs* |
-| Consulter les logs système    | Admin           | `<<extend>>` de *Gérer les utilisateurs* (optionnel) |
-
-
-## Exemple concret : Application de reservation Kékés voyages : 
+## Real Example: Kékés Voyages Reservation App
 ![diagramme-use-case-kékés-voyages](data/use-case-diagram-for-travel-agency.jpg)
 
