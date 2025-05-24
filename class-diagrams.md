@@ -1,45 +1,46 @@
-# Diagramme de classe
-```bash
+# Class Diagram  
+```
 +----------------------+
-| NomClasse            |
+| ClassName            |
 +----------------------+
-| - attribut1 : Type   |
-| - attribut2 : Type   |
+| - attribute1 : Type  |
+| - attribute2 : Type  |
 +----------------------+
-| + méthode1() : Type  |
-| + méthode2() : Type  |
+| + method1() : Type   |
+| + method2() : Type   |
 +----------------------+
 ```
 
-- `+` → public
-- `-` → private
-- `#` → protected
-- `: Type` → type de retour ou type d’attribut
+- `+` → public  
+- `-` → private  
+- `#` → protected  
+- `: Type` → return type or attribute type  
 
-## Relations entre les classes 
-|Type de relation|Symbole UML|Explication|
-|:---|:---|:---|
-|Association|simple trait `──`|Une classe utilise une autre|
-|Dépendance|trait pointillé `--->`|Une classe dépend d’une autre|
-|Aggregation|trait pointillé `◊──`|Une classe utilise une autre et peut la supprimer|
-|Héritage|flèche creuse `──▷`|Classe enfant hérite d’une classe mère|
-|Composition|trait pointillé `◆──`|Une classe contient obligatoirement l’autre (fort lien)|
-### Exemple : 
-```bash
+## Relationships between classes  
+|Relation type | UML symbol | Explanation                     |  
+|:-------------|:-----------|:--------------------------------|  
+|Association   | simple line `──`     | One class uses another          |  
+|Dependency    | dotted line `--->`   | One class depends on another    |  
+|Aggregation   | dotted line `◊──`    | One class uses another and can delete it |  
+|Inheritance   | hollow arrow `──▷`   | Child class inherits from parent class |  
+|Composition   | dotted line `◆──`    | One class must contain another (strong link) |  
+
+### Example:  
+```
 +----------------------+
-|      Paiement        |
+|      Payment         |
 +----------------------+
-| - montant : double   |
+| - amount : double    |
 +----------------------+
-| + effectuer()        |
+| + perform()          |
 +----------------------+
            ▲
            |
 +----------------------+         +-----------------------+
-| PaiementCarte        |         | PaiementEspèces       |
+| CardPayment          |         | CashPayment           |
 +----------------------+         +-----------------------+
-| - numCarte : String  |         |                       |
+| - cardNumber : String|         |                       |
 +----------------------+         +-----------------------+
-| + effectuer()        |         | + effectuer()         |
+| + perform()          |         | + perform()           |
 +----------------------+         +-----------------------+
 ```
